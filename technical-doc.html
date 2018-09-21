@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Python Documentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="technical.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <h2 id="nav-title">Python Documentation</h2>
+            <div>
+                <table id="table-wrapper">
+                    <tr><td><a href="#introduction" class="nav-link">Introduction</a></td></tr>
+                    <tr><td><a href="#data" class="nav-link">Data Types</a></td></tr>
+                    <tr><td><a href="#arithmetic" class="nav-link">Arithmetic Operators</a></td></tr>
+                    <tr><td><a href="#variables" class="nav-link">Variables</a></td></tr>
+                    <tr><td><a href="#conditionals" class="nav-link">Conditionals</a></td></tr>
+                    <tr><td><a href="#loops" class="nav-link">Loops</a></td></tr>
+                    <tr><td><a href="#functions" class="nav-link">Functions</a></td></tr>
+                    <tr><td><a href="#references" class="nav-link">References</a></td></tr>
+                </table>
+            </div>
+        </nav>
+        <main id="main-doc">
+            
+            <section class="main-section">
+                <header id="introduction"><h2>Introduction</h2></header>
+                <p>
+                    Welcome! If you're not familiar with computer programming, I highly encourage you to research it before continuing with this article. For everyone
+                    else, I'll give you a brief overview of Python. We'll go over some of the beginning concepts found in every programming language, and there will 
+                    be complementary Python examples.
+                </p>
+                <p>
+                    So... <em>What is Python</em>? 
+                </p>
+                    <blockquote>
+                            Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, 
+                            combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting 
+                            or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces 
+                            the cost of program maintenance. - Python Software Foundation
+                    </blockquote>
+                <p>
+                    Basically, it's an easy to use language. A lot of programmers prefer using because of its increased productivity and no compilation step. This makes
+                    debugging Python much easier compared to other lower level languages. Plus, Python is a ton of fun! Let's check it out.
+                </p>              
+            </section>
+
+            <section class="main-section">
+                    <header id="data"><h2>Data Types</h2></header>
+            <p>
+                So there are 4 basic data types in Python:
+            </p>
+                <ul>
+                    <li>
+                        <b>Integer</b> - includes whole numbers as well as their negative counter parts. However, they do include not numbers that count past the decimal point. <br>
+                        <code># ex. 5</code>
+                    </li>
+                    <li>
+                        <b>Float</b> - includes all numbers that include digits past the decimial point, even if they are just zeros after the decimal point. <br>
+                        <code># ex. 6.103</code>
+                    </li>
+                    <li>
+                        <b>String</b> - any character(s) inside of a pair of single or double quotes. <br>
+                        <code># ex. 'hello'</code>
+                    </li>
+                    <li><b>Boolean</b> - a binary data type with the values of True or False.</li>
+                </ul>
+            <p>
+                There are several more technical data types in Python, but we'll stick with the basics to avoid confusion.
+            </p>
+
+            </section>
+
+            <section class="main-section">
+                <header id="arithmetic"><h2>Arithmetic Operators</h2></header>
+                <p>
+                    The arithmetic operators function similarly as they would in other programming languages. However, there are some slight differences that we will point out.
+                </p>
+                    <ul>
+                        <li>
+                            <b>+ Addition</b> - Adds two operands together<br>
+                            <code>2 + 2 --> 4</code>
+                        </li>
+                        <li>
+                            <b>- Subtract </b>- Subtracts the right operand from the left<br>
+                            <code>4 - 1 --> 3</code>
+                        </li>
+                        <li>
+                            <b>* Multiplication</b> - Multiplies two operands together <br>
+                            <code>4 * 3 --> 12</code>
+                        </li>
+                        <li>
+                            <b>/ Division</b> - Divides right operand from left <br>
+                            <code>6 / 3 --> 2.0</code>
+                        </li>
+                        <li>
+                            <b>% Modulus</b> - Divides with the right operand from the left and outputs the remainder <br>
+                            <code>5 % 2 --> 1</code>
+                        </li>
+                        <li>
+                            <b>** Exponent</b> - Raises the left operand to the power of the right operand <br>
+                            <code>5 ** 2 --> 25</code>
+                        </li>
+                        <li>
+                            <b>// Floor Division</b> - Divides the right operand from the left and outputs the quotient as an integers <br>
+                            <code>50 // 7 --> 7</code>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Note: Normal division in Python will always produce a float, even if both operands are integers. In contrast, older languages will always 
+                        produce an integer when dividing two integers together, even if the result is supposed to logically produce a decimal value. For Example, 5 / 2 in
+                        Python would produce 2.5, but in C++, the result is truncated from the decimal point onwards. Floor division does exactly this in the Python.
+        
+                        Also, the exponent operator is included in the Python environment, so there is no need to import from any libraries or modules.
+                    </p>
+
+            </section>
+
+            
+            <section class="main-section">
+                <header id="variables"><h2>Variables</h2></header>
+                <p>
+                    Initializing a variable is very easy in Python. You must have a variable with any name, an assignment operator, and its corresponding value. <br>
+                </p>
+    <pre>
+        <code>
+            x = 30
+        </code>
+    </pre>
+                <p>
+                    However, there are two few naming rules that we have to be aware of:
+                </p>
+                    <ul>
+                        <li>
+                            You cannot start a variable name with a number. <br>
+
+                            <code>3zebras   # Wrong!</code>
+
+                        </li>
+                        <li>
+                            You cannot have any special characters other than an underscore in the name.
+                        </li>
+                    </ul>
+
+    <pre>
+        <code>
+            bird.    # Wrong!
+            bird_    # Okay  
+        </code>
+    </pre>
+                <p>
+                    Python also shows some differences in its variables from the older languages. In the older languages, you have to declare a variable, which allows
+                    the compiler know what type of Data/Class it belongs to. You can initialize the vaariable when it is declared, or assign it a value later, but you cannot
+                    assign a value outside of its class or data type. So an <em>int</em> variable cannot hold a <em>char</em>, and a <em>char</em> variable cannot hold a <em>bool</em> value, and so forth.
+                    However, because all Python vairables are just references, they hold more flexibilty in their assignment and reassignment.  
+                </p>
+    <pre>
+        <code>
+            x = 3
+            x = 4.0 
+            x = 'this is normal'
+            x = True 
+            
+            #no errors. x holds the latest assigned variables
+        </code>
+    </pre>
+                <p>
+                    Note: Because of how Python variables dynamically allocate memory for which ever type of value that is stored, we must intialized the variable with some type
+                    of value. 
+                </p>
+            </section>
+            
+            <section class="main-section">
+                <header id="conditionals"><h2>Conditionals</h2></header>
+                <p>
+                    Conditionals work the same as it does in most other languages. The syntax is a little different but much simpler.
+                </p>
+                <h3>The If... Statement</h3>
+                <p>
+                    Simply, if the condition within the if statement holds true, then the statement(s) nested underneath will run. Otherwise,
+                    it will not run.
+                </p>
+    <pre>
+        <code>
+            if 2 + 2 == 4:
+                print("Runs")  
+                
+            #Output:
+            #Runs 
+        </code>
+    </pre>
+                <h3>The Elif...Statement</h3>
+                <p>
+                    Just like the <em>else if</em> in other languages, <em>elif</em> is a shortened name and functions the same way. Paired with
+                    and <em>if</em> statement, the condition and corresponding statement(s) will only run if its paried <em>if</em> statement evalutes to false. You can
+                    pair as many elif statements to a an if statement that you want, but only one of them will run regardless of how many elif statements are true. <br>
+                </p>
+    <pre>
+        <code>
+            if 2 + 3 == 6:
+                print('A')  # False
+            elif 3 + 3 &gt; 9:
+                print('B')  # False
+            elif 9 &lt; 10:
+                print('C')  # True
+            elif 2 == 2:
+                print('D')  # True, but not first
+
+            #Output:
+            #C
+        </code>
+    </pre>
+                <h3>The Else...Statement</h3>
+                <p>
+                    Much like the elif statement, the else statement must be paired with an if statement. The only difference is that
+                    the else statement hold no conditional statement. So, the nested statement underneath else will automatically run if the <strong>if</strong> statement 
+                    (and all other elif statments if they are present) evaluates to be false. 
+                </p>
+    
+    <pre>
+        <code>
+            if 3 &gt; 9:
+                print('A')
+            elif 4 &lt; 0:
+                print ('B')
+            else:
+                print('C') 
+            
+            #Output:
+            #C
+        </code>
+    </pre>
+            </section>
+            
+            <section class="main-section">
+                <header id="loops"><h2>Loops</h2></header>
+                <h3>While Loops</h3> 
+                <p>
+                    While loops are a way to run a statement or set of statements as long as the condition for the while loop is true.
+                </p>
+
+    <pre>
+        <code>
+            x = 0
+            while x &lt;=4:
+                print('Hi')
+                x = x + 1
+            
+            #Output:
+            #Hi
+            #Hi
+            #Hi
+            #Hi
+        </code>
+    </pre>
+                <p>
+                    Note: In our example, the variable is inititalized outside of the while loop and is used as a limit for the while condition. The value changed
+                    within the body of the while loop so that the condition will change over time. Without it, the body of the while loop would run infintely.
+                </p>
+                <h3>For Loop</h3> 
+                <p>
+                    For loops in Python has been simplified greatly compared to older languages. In a for loop iteration, you only have to specify
+                    two things, the range of items to be iterated, and the item itself. For example let's take a look at two different ways to iterate the same list.
+                    We'll being with a specific number range to iterate the index of an list.
+                </p>
+
+    <pre>
+        <code>
+            exampleList = ['A', 'B', 'C', 'D']
+            for i in range(0,4):
+                print(exampleList[i])
+            
+            #Output:
+            #A
+            #B
+            #C
+            #D
+        </code>
+    </pre>
+                <p>
+                    As we can see, the i is a local variable that holds the value of each iterated number in the number range. We begin the iteration at 0 and end the number
+                    before 4. So the body will loop starting from 0 until it reaches 3 which still is 4 iterations. That avoids any index errors since lists indices 
+                    start from 0. Let's look another way.
+                </p>
+    <pre>
+        <code>
+            for item in exampleList:
+                print(item)
+
+            #Output:
+            #A
+            #B
+            #C
+            #D
+        </code>
+    </pre>      
+                <p>
+                    This type of iteration is much simpler. It iterates every item in the container, which is exampleList, in the same order that it was originally set. 
+                </p>
+            </section>
+            
+            <section class="main-section">
+                <header id="functions"><h2>Functions</h2></header>
+                <p>
+                    Functions in Python come in several different variations. The most common ones you probably have seen already include the built-in <i>print()</i>. Others
+                    are attached to items like <i>"help".upper()</i>. The function is follows the element with a preceding period. This is called a method, because the
+                    function belongs and works within a specified class. However, we'll leave that for the more advanced Python tutorials. Let's talk about user defined
+                    functions where you will most likely start with functions.
+                </p>
+                <p>
+                    To begin defining a user defined method, let's discuss the required elements:
+                </p>
+                    <ul>
+                        <li>def - allows the Python interpreter know that this will be function. </li>
+                        <li>functionName - name of the function that will be used to call the function.</li>
+                        <li>argument (optional) - decided by the user, argument(s) are to be processed within the function.</li>
+                        <li>return (optional) - outputs some result and ends the function execution.</li>
+                    </ul>
+
+    <pre>
+        <code>
+            def functionName(argument):
+                #executing statements
+                return someResult
+        </code>
+    </pre>
+
+        <p>
+            The above example shows the basic syntax of a user defined Python function. However, the optional elements of a Python function aren't always necessary.
+            Here, we have an example of a function with neither an argument nor a return.        
+        </p>
+    <pre>
+        <code>
+            def scream():
+                print('HELLO')
+            
+            scream()
+            
+            #Output: 
+            #HELLO
+        </code>
+    </pre>
+
+        <p>
+            Easy and simple right? How about if we wanted to have an argument with no return value?
+        </p>
+
+    <pre>
+        <code>
+            def sayWord(word):
+                print(word)
+            
+            sayWord('hello')
+
+            #Output: 
+            #hello
+        </code>
+    </pre>
+
+        <p>
+            If you have arguments for you function, be sure to include them in the call. Otherwise, you may get an exception since it is missing a necessary component for the
+            function to run. 
+        </p>
+        <p>
+            Finally if we wanted to add a return statement to get a value from the function call, we'll simply have the function return some type of value.
+        </p>
+
+    <pre>
+        <code>
+            def sumOfTwo(a,b):
+                return a + b
+
+            result = sumOfTwo(3,1)
+            print(result)
+
+            #Output: 
+            #4
+        </code>
+    </pre>
+        <p>
+            Notice: Even though we get some type of value back from sumOfTwo, we still have to store the value in a variable, otherwise it will disappear!
+        </p>
+            </section>
+            
+            <section class="main-section">
+                <header id="references"><h2>References</h2></header>
+                <p>Please Check out these pages for more information. Information from this page is sourced from the following links:</p>
+                <ul>
+                    <li><a href="https://docs.python.org/3/index.html">Python 3.7.0 documentation</a></li>
+                    <li><a href="https://www.w3schools.com/python/">W3 Schools Tutorial</a></li>
+                    <li><a href="https://www.tutorialspoint.com/python/index.htm">Tutorials Point: Python Tutorial</a></li>
+                    <li><a href="https://www.learnpython.org/">Learn Python</a></li>
+                </ul>
+            </section>
+
+        </main>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin-left: -5px;
+    margin-top: -5px;
+    padding-top: 5px;
+
+    color: rgb(61, 61, 61);
+}
+
+#navbar{
+    border-right: 4px rgb(185, 185, 185) solid;
+    min-width: 325px;
+}
+
+table{
+    /*extends width of borders the entire width of nav menu*/
+    width: 101%; 
+    
+    /*indents text uniformly*/
+    text-indent: 25px;
+}
+
+#nav-title{
+    /*adds font-size difference and padding for a bigger cell*/
+    font-size: 22px;
+    padding: 10px 0 20px 20px;
+    
+    /*different font styling for uniqueness*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+td{
+    /*creates smaller thin borders for each nav menu*/
+    border-collapse: collapse;
+    border-top: 1px rgb(128, 128, 128) solid;
+
+    /*add space between each cell*/
+    line-height: 200%; /*Choice this over padding to increase content size of links (for clicking)*/
+}
+
+td>a{
+    /*Remove hyperlink colors*/
+    color: rgb(116, 116, 116);
+    text-decoration-line: none;
+
+    /*to make data cell clickable*/
+    display: block; /*Turns inline to block element. Expanded width and height to entire cell*/
+    width: 100%;
+    height: 100%;
+}
+
+#main-doc{
+    /*spacing for the main part of the document*/
+    padding-left: 25px;
+    
+    /*Overrides the min-width:auto so that flex item can be smaller than its content*/
+    overflow: auto;
+}
+
+p{
+    /*spacing for each individual paragraph within the document*/
+    padding-left: 10px;
+    line-height: 22px;
+}
+
+/*elements within main-doc to style*/
+header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+pre{
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px){
+    
+    body{
+        /*Stacks the content within the container vertically*/
+        flex-direction: column;
+
+        /*ensures that it stretches across entire screen*/
+        width: 100%;
+
+        /*No specific margin or padding so that everything
+        is even on the page.*/  
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbar{
+        /*Makes sure it stretches out evenly*/
+        width: 100%;
+        
+        /*turn off minimum width, so container can shrink beyond 325px*/
+        min-width: 0;
+        border-right: 0;
+    }
+
+    /*restyling individual elements of the navbar*/
+    #nav-title{
+        text-align: center;
+    }
+
+    #table-wrapper{
+
+    }
+
+    table{
+        /*specific border styling for new table positioning*/
+        border-top: 2px rgb(85, 85, 85) solid;
+        border-bottom: 2px rgb(85, 85, 85) solid;
+        border: 1px rgb(71, 71, 71) solid;
+
+        /*re-adjust indentation and padding*/
+        text-indent: 40px;
+        padding-top: 0;
+        
+
+        /*re-adjust table to fit the browser*/
+        width: 100%;
+        margin: auto;
+        min-width: 0;
+        
+        /*grid properties to allow scrolling menu*/
+        display: block;
+
+        /*create scroll effect for navigation menu*/
+        height: 200px;
+        overflow-y: auto;
+
+    }
+
+    td{
+        width: 100vw;
+    }
+
+    #main-doc{
+        /*remove originally padding*/
+        padding: 0;
+
+        /*Contain it in narrower region and automatically
+        centers the margin*/
+        width: 90%;
+        margin: auto;
+    }
+
+    p{
+        /*removing padding from paragraphs. Indentation not as important on narrow screen*/
+        padding: 0;
+    }
+
+}
